@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Provider, observer } from 'mobx-react';
-import { I18n } from './i18n';
+
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import './App.css';
@@ -17,14 +17,9 @@ class App extends Component {
   render() {
     return (
       <Provider {...rootStore}>
-        <I18n
-          locale={rootStore.langStore.language}
-          messages={rootStore.langStore.resource}
-        >
-          <Router>
-            <Main />
-          </Router>
-        </I18n>
+        <Router>
+          <Main />
+        </Router>
       </Provider>
     );
   }

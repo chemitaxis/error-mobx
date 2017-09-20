@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
 
-import { translate } from '../i18n';
 @inject('langStore')
 @observer
 class Page2 extends Component {
@@ -14,7 +13,7 @@ class Page2 extends Component {
   render() {
     return (
       <div>
-        <div>Page 2 {this.props.t('hello')}</div>
+        <div>Page 2 {this.props.langStore.t('hello')}</div>
         <div>
           <button onClick={this.changeLang}>Change lang</button>
         </div>
@@ -26,4 +25,4 @@ class Page2 extends Component {
   }
 }
 
-export default translate()(Page2);
+export default Page2;

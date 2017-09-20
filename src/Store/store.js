@@ -8,6 +8,9 @@ const LanguageStore = types
     get currentLanguage() {
       return self.language;
     },
+    t(text) {
+      return self.resource[text];
+    },
     get resource() {
       switch (self.language) {
         case 'en':

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Provider, observer } from 'mobx-react';
-import { I18n } from 'react-polyglot';
+import { I18n } from './i18n';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import './App.css';

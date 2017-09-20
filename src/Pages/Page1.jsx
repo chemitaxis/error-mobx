@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
-import { translate } from 'react-polyglot';
 import { Link } from 'react-router-dom';
+import { translate } from '../i18n';
 
 @inject('langStore')
 @observer
